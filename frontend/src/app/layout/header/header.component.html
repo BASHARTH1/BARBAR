@@ -1,0 +1,46 @@
+<header class="site-header" [class.is-scrolled]="scrolled()">
+  <div class="container header-inner">
+    <a routerLink="/" class="brand" (click)="closeAll()">
+      <span class="brand-logo">
+        <img src="assets/site-logo-barbar.png" alt="جمعية باربار الخيرية" />
+      </span>
+    </a>
+
+    <nav class="primary-nav" [class.open]="mobileOpen()">
+      <ul>
+        @for (link of links; track link.label) {
+          <li [class.has-children]="!!link.children" [class.open]="openMenu() === link.label">
+            @if (!link.children) {
+              <a [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact: link.path === '/'}" (click)="closeAll()">{{ link.label }}</a>
+            } @else {
+              <button type="button" class="nav-trigger" (click)="toggleSubmenu(link.label)">
+                {{ link.label }}
+                <span class="caret">▾</span>
+              </button>
+              <ul class="submenu">
+                @for (child of link.children; track child.path) {
+                  <li>
+                    @if (isExternal(child.path)) {
+                      <a [href]="child.path" target="_blank" rel="noopener" (click)="closeAll()">{{ child.label }}</a>
+                    } @else {
+                      <a [routerLink]="child.path" (click)="closeAll()">{{ child.label }}</a>
+                    }
+                  </li>
+                }
+              </ul>
+            }
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://e.barbarcharity.org/OnlineServices/don_online_payment.php?NewTransaction=1&donParam=NQ==" class="btn btn-accent donate-btn">
+        تبرع الآن
+      </a>
+      <button class="hamburger" (click)="toggleMobile()" [attr.aria-expanded]="mobileOpen()" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
