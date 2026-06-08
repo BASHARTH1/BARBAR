@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { ApiService } from '../../core/services/api.service';
+import { DonationsService } from '../../core/services/donations.service';
 import { Campaign, DonationPayload } from '../../core/models/models';
 
 @Component({
@@ -134,6 +135,7 @@ import { Campaign, DonationPayload } from '../../core/models/models';
 })
 export class DonateComponent implements OnInit {
   private api = inject(ApiService);
+  private donations = inject(DonationsService);
   campaigns = signal<Campaign[]>([]);
   loading = signal(false);
   success = signal(false);
@@ -161,21 +163,19 @@ export class DonateComponent implements OnInit {
     this.payload.amount = c.amount;
   }
 
-  submit(f: NgForm) {
+  async submit(f: NgForm) {
     if (f.invalid || !this.payload.amount) return;
     this.loading.set(true);
     this.error.set(null);
     this.success.set(false);
-    this.api.donate(this.payload).subscribe({
-      next: () => {
-        this.success.set(true);
-        this.loading.set(false);
-        f.resetForm({ amount: 25, campaignSlug: 'general', recurring: false });
-      },
-      error: () => {
-        this.error.set('حدث خطأ، يرجى المحاولة لاحقًا.');
-        this.loading.set(false);
-      },
-    });
+    try {
+      await this.donations.create(this.payload);
+      this.success.set(true);
+      f.resetForm({ amount: 25, campaignSlug: 'general', recurring: false });
+    } catch {
+      this.error.set('حدث خطأ، يرجى المحاولة لاحقًا.');
+    } finally {
+      this.loading.set(false);
+    }
   }
 }

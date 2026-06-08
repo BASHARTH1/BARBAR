@@ -245,3 +245,67 @@ select * from (values
   ('السيد أسامة عبدالجليل المحافظة', 'رئيس لجنة العلاقات العامة والإعلام', '/assets/members/member-9.jpg', 90)
 ) as seed(name, role, image, sort_order)
 where not exists (select 1 from public.team_members);
+
+-- ====================================================================
+-- DONATIONS (public submissions; admin-only read)
+-- ====================================================================
+
+create table if not exists public.donations (
+  id uuid primary key default uuid_generate_v4(),
+  donor_name text not null,
+  email text not null,
+  phone text,
+  campaign_slug text not null,
+  amount numeric not null check (amount >= 1),
+  recurring boolean default false,
+  message text,
+  status text not null default 'pending',
+  created_at timestamptz default now()
+);
+
+alter table public.donations enable row level security;
+
+-- Anyone (even anonymous visitors) may submit a donation
+drop policy if exists "donations_insert_public" on public.donations;
+create policy "donations_insert_public" on public.donations
+  for insert
+  to anon, authenticated
+  with check (true);
+
+-- Only the logged-in admin may read submitted donations
+drop policy if exists "donations_select_auth" on public.donations;
+create policy "donations_select_auth" on public.donations
+  for select
+  to authenticated
+  using (true);
+
+-- ====================================================================
+-- CONTACT MESSAGES (public submissions; admin-only read)
+-- Ready for a future contact form — the contact page has no form yet.
+-- ====================================================================
+
+create table if not exists public.contact_messages (
+  id uuid primary key default uuid_generate_v4(),
+  name text not null,
+  email text not null,
+  phone text,
+  subject text not null,
+  message text not null,
+  created_at timestamptz default now()
+);
+
+alter table public.contact_messages enable row level security;
+
+-- Anyone may send a contact message
+drop policy if exists "contact_insert_public" on public.contact_messages;
+create policy "contact_insert_public" on public.contact_messages
+  for insert
+  to anon, authenticated
+  with check (true);
+
+-- Only the logged-in admin may read contact messages
+drop policy if exists "contact_select_auth" on public.contact_messages;
+create policy "contact_select_auth" on public.contact_messages
+  for select
+  to authenticated
+  using (true);
