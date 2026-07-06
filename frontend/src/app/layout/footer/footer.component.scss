@@ -48,6 +48,19 @@
   &:hover { background: #e8f3fb; color: var(--color-primary-dark); }
 }
 
+.col a.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #25D366;
+  color: #fff;
+  opacity: 1;
+  border: 0;
+  &:hover { background: #1ebe5b; color: #fff; }
+  .wa-icon { display: inline-flex; align-items: center; }
+}
+
 .site-footer {
   background: var(--color-primary-darker);
   color: #d3e3ef;

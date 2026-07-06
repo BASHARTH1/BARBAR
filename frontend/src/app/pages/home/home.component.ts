@@ -4,7 +4,6 @@ import { IntroComponent } from './sections/intro.component';
 import { DonationHubComponent } from './sections/donation-hub.component';
 import { VideoSupportComponent } from './sections/video-support.component';
 import { ProjectsGridComponent } from './sections/projects-grid.component';
-import { StatsComponent } from './sections/stats.component';
 import { NewsSectionComponent } from './sections/news-section.component';
 import { SponsorsComponent } from './sections/sponsors.component';
 
@@ -17,7 +16,6 @@ import { SponsorsComponent } from './sections/sponsors.component';
     DonationHubComponent,
     VideoSupportComponent,
     ProjectsGridComponent,
-    StatsComponent,
     NewsSectionComponent,
     SponsorsComponent,
   ],
@@ -28,7 +26,6 @@ import { SponsorsComponent } from './sections/sponsors.component';
     <app-donation-hub></app-donation-hub>
     <app-video-support></app-video-support>
     <app-projects-grid></app-projects-grid>
-    <app-stats></app-stats>
     <app-news-section></app-news-section>
   `,
 })

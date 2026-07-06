@@ -81,13 +81,13 @@ export class SponsorsComponent {
   partners: Partner[] = [
     { name: 'الأوقاف الجعفرية', logo: '/assets/partners/jaafari-awqaf.png' },
     { name: 'سهيلات Bahrain Credit', logo: '/assets/partners/bahrain-credit.png' },
-    { name: 'RTC', logo: '/assets/partners/rtc.png' },
+    { name: 'الجامعة الخليجية', logo: '/assets/partners/gulf-university.png' },
     { name: 'MIBS', logo: '/assets/partners/mibs.png' },
     { name: 'الجواد - Al Hawaj', logo: '/assets/partners/al-hawaj.png' },
     { name: 'الناصر لتأجير معدات البناء', logo: '/assets/partners/al-nasser.png' },
     { name: 'مقاولات المحيط', logo: '/assets/partners/al-moheet.png' },
     { name: 'اليوسف القابضة', logo: '/assets/partners/alyusuf-holding.png' },
     { name: 'خليك العزيز', logo: '/assets/partners/khaleek-azeez.png' },
-    { name: 'الجامعة الخليجية', logo: '/assets/partners/gulf-university.png' },
+    { name: 'RTC', logo: '/assets/partners/rtc.png' },
   ];
 }

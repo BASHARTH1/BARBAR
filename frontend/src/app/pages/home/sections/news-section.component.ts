@@ -8,7 +8,7 @@ import { NewsService, NewsItem } from '../../../core/services/news.service';
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <section class="section news">
+    <section class="section band news">
       <div class="container">
         <div class="section-head">
           <h2>آخر الأخبار والفعاليات</h2>

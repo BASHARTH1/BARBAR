@@ -130,6 +130,22 @@
 }
 .donate-btn { padding: 11px 24px; }
 
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: #25D366;
+  color: #fff;
+  border: 0;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  transition: background 0.2s, transform 0.15s;
+}
+.whatsapp-btn:hover { background: #1ebe5b; color: #fff; }
+.whatsapp-btn:active { transform: translateY(1px); }
+.whatsapp-btn .wa-icon { display: inline-flex; align-items: center; }
+
 .hamburger {
   display: none;
   background: transparent;
