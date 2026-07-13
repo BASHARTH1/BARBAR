@@ -19,6 +19,9 @@ export class HeaderComponent {
   scrolled = signal(false);
   mobileOpen = signal(false);
   openMenu = signal<string | null>(null);
+  ibanCopied = signal(false);
+
+  readonly iban = 'BH25BIBB00100000217748';
 
   links: NavLink[] = [
     { label: 'الرئيسية', path: '/' },
@@ -64,5 +67,22 @@ export class HeaderComponent {
 
   isExternal(path: string): boolean {
     return /^https?:\/\//.test(path);
+  }
+
+  async copyIban() {
+    try {
+      await navigator.clipboard.writeText(this.iban);
+    } catch {
+      const el = document.createElement('textarea');
+      el.value = this.iban;
+      el.style.position = 'fixed';
+      el.style.opacity = '0';
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+    }
+    this.ibanCopied.set(true);
+    setTimeout(() => this.ibanCopied.set(false), 2000);
   }
 }
