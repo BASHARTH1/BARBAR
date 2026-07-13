@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-video-support',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   template: `
     <section class="section video-support">
       <span class="bg-blob blob-1" aria-hidden="true"></span>
@@ -42,11 +41,6 @@ import { RouterLink } from '@angular/router';
                   تقارير دورية للمتبرعين
                 </li>
               </ul>
-
-              <div class="actions">
-                <a href="https://e.barbarcharity.org/OnlineServices/don_online_payment.php?NewTransaction=1&donParam=NQ==" class="btn btn-primary">تبرع الآن</a>
-                <a routerLink="/projects" class="btn btn-outline">مشاريعنا</a>
-              </div>
             </div>
 
             <div class="vs-video">
@@ -193,7 +187,6 @@ import { RouterLink } from '@angular/router';
       flex-shrink: 0;
     }
 
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
     /* ===== Video side ===== */
     .vs-video { position: relative; }
