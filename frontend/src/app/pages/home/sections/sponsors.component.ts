@@ -43,12 +43,13 @@ interface Partner {
       unicode-bidi: isolate;
     }
     .logos {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 24px;
-      align-items: center;
     }
     .logo {
+      flex: 0 1 calc((100% - 4 * 24px) / 5);
       background: #fff;
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
@@ -72,16 +73,15 @@ interface Partner {
       transition: filter 0.2s;
     }
     .logo:hover img { filter: grayscale(0); }
-    @media (max-width: 980px) { .logos { grid-template-columns: repeat(4, 1fr); } }
-    @media (max-width: 720px) { .logos { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 480px) { .logos { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 980px) { .logo { flex-basis: calc((100% - 3 * 24px) / 4); } }
+    @media (max-width: 720px) { .logo { flex-basis: calc((100% - 2 * 24px) / 3); } }
+    @media (max-width: 480px) { .logo { flex-basis: calc((100% - 24px) / 2); } }
   `],
 })
 export class SponsorsComponent {
   partners: Partner[] = [
     { name: 'الأوقاف الجعفرية', logo: '/assets/partners/jaafari-awqaf.png' },
     { name: 'سهيلات Bahrain Credit', logo: '/assets/partners/bahrain-credit.png' },
-    { name: 'الجامعة الخليجية', logo: '/assets/partners/gulf-university.png' },
     { name: 'MIBS', logo: '/assets/partners/mibs.png' },
     { name: 'الجواد - Al Hawaj', logo: '/assets/partners/al-hawaj.png' },
     { name: 'الناصر لتأجير معدات البناء', logo: '/assets/partners/al-nasser.png' },
