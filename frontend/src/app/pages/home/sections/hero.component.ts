@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
       <div class="container hero-grid">
         <div class="hero-text">
           <span class="eyebrow">وَمَا تُقَدِّمُوا لِأَنفُسِكُم مِّنْ خَيْرٍ تَجِدُوهُ عِندَ اللَّهِ.</span>
-          <h1 class="title">من أيقن بالخلف<br/>جاد بالعطية</h1>
+          <h1 class="title">من أيقن بالخلف جاد بالعطية</h1>
           <p class="lede">
             جمعية خيرية مسجلة في وزارة العمل والتنمية الاجتماعية برقم الترخيص 70/ج/خ
             وتعنى بمساعدة ودعم الأفراد والأسر، وتقديم الدعم الاجتماعي والإنساني،
