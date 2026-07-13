@@ -206,7 +206,7 @@ function parseTimeRange(text: string): { start: string; end: string } {
       color: #fff;
       padding: 64px 0;
       text-align: center;
-      h1 { font-size: 36px; margin-bottom: 8px; }
+      h1 { font-size: 36px; margin-bottom: 8px; color: #fff; }
     }
     .crumbs { font-size: 14px; opacity: 0.9; }
     .crumbs a { color: var(--color-accent); }

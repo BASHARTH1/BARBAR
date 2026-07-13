@@ -60,7 +60,7 @@ import { RouterLink } from '@angular/router';
       color: #fff;
       padding: 64px 0;
       text-align: center;
-      h1 { font-size: 36px; margin-bottom: 6px; }
+      h1 { font-size: 36px; margin-bottom: 6px; color: #fff; }
     }
     .crumbs { font-size: 14px; opacity: 0.9; }
     .crumbs a { color: var(--color-accent); }

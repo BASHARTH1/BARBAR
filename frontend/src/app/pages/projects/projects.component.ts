@@ -44,7 +44,7 @@ import { Project } from '../../core/models/models';
     </section>
   `,
   styles: [`
-    .page-banner { background: linear-gradient(135deg, #154d77, #2A87C9); color: #fff; padding: 64px 0; text-align: center; h1 { font-size: 36px; } }
+    .page-banner { background: linear-gradient(135deg, #154d77, #2A87C9); color: #fff; padding: 64px 0; text-align: center; h1 { font-size: 36px; color: #fff; } }
     .crumbs { font-size: 14px; opacity: 0.9; } .crumbs a { color: var(--color-accent); } .crumbs span { padding: 0 6px; }
     .project .thumb svg { width: 100%; display: block; }
     .body { padding: 22px; }
