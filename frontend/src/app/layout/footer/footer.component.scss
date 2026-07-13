@@ -167,6 +167,13 @@
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  /* Two-column footer so it stays compact instead of one long stack */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 22px; }
+  /* Brand intro and contact block span the full width */
+  .brand-col,
+  .footer-grid .col:last-child { grid-column: 1 / -1; }
   .cta-inner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 360px) {
+  .footer-grid { gap: 26px 14px; }
 }
