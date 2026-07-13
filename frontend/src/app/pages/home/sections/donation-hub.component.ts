@@ -130,7 +130,7 @@ export class DonationHubComponent {
       icon: 'medical',
       tone: 'lavender',
       description: 'نسعى لتخفيف معاناة المرضى من ذوي الدخل المحدود عبر دعمهم بتكاليف العمليات الجراحية والعلاجات الضرورية، لنمنحهم فرصة حقيقية لاستعادة صحتهم ومتابعة حياتهم بكرامة وأمل',
-      link: 'https://e.barbarcharity.org/OnlineServices/don_online_payment.php?NewTransaction=1&donParam=OA==',
+      link: 'https://e.barbarcharity.org/u/elaj',
     },
     {
       id: 'mosques',
@@ -138,6 +138,7 @@ export class DonationHubComponent {
       icon: 'mosque',
       tone: 'mint',
       description: 'نوفّر الدعم اللازم لصيانة المساجد والمقابر، من خلال أعمال الترميم والتجهيز وتوفير المستلزمات الأساسية، للحفاظ على قدسية المكان وخدمة المجتمع وتعزيز قيم التكافل',
+      link: 'https://e.barbarcharity.org/u/maqbara',
     },
     {
       id: 'housing',
@@ -145,7 +146,7 @@ export class DonationHubComponent {
       icon: 'home',
       tone: 'peach',
       description: 'نعمل على إعادة ترميم البيوت المتضررة وبناء مساكن آمنة للأسر المحتاجة، لنضمن لهم بيئة مستقرة تحفظ كرامتهم وتوفر لهم حياة أكثر راحة وأمانًا',
-      link: 'https://e.barbarcharity.org/OnlineServices/don_online_payment.php?NewTransaction=1&donParam=MTE=',
+      link: 'https://e.barbarcharity.org/u/benaamptrmem',
     },
     {
       id: 'marriage',
@@ -153,6 +154,7 @@ export class DonationHubComponent {
       icon: 'heart',
       tone: 'sky',
       description: 'نقدّم المساندة للشباب المقبلين على الزواج ممّن يواجهون صعوبات مادية، عبر المساهمة في تكاليف تجهيزهم، لنساعدهم في بناء حياة كريمة وبداية مستقرة',
+      link: 'https://e.barbarcharity.org/u/sadaqat',
     },
   ];
 }
