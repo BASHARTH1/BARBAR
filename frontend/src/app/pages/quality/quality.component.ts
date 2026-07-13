@@ -16,37 +16,44 @@ import { RouterLink } from '@angular/router';
 
     <section class="section">
       <div class="container">
-        <div class="intro">
+        <article class="policy">
           <p>
-            تلتزم جمعية باربار الخيرية الاجتماعية بتطبيق سياسة الجودة في جميع أعمالها
-            وخدماتها، بما يحقق أفضل خدمة للمستفيدين ويعزز ثقة شركائها من أهل الخير
-            والجهات الرسمية والإعلامية، وذلك من خلال منظومة متكاملة تقوم على المرتكزات
-            التالية.
+            في جمعية باربار الخيرية الاجتماعية، نلتزم بتحسين جودة حياة الأسر والأفراد
+            المحتاجين من خلال تقديم المساعدة الخيرية، والدعم التعليمي، وبرامج الرعاية
+            الاجتماعية، وغيرها من الخدمات الأساسية التي تُسهم في التنمية المجتمعية
+            المستدامة. رسالتنا هي الارتقاء بالمحتاجين من خلال نهجٍ شفافٍ وفعّالٍ يركّز
+            على المستفيدين.
           </p>
-        </div>
+          <p>
+            ندرك أن رضا المستفيدين ورفاهيتهم هما جوهر أنشطتنا. لذلك، نلتزم بفهم وتلبية
+            احتياجات وتوقعات المستفيدين والمانحين والموظفين والمتطوعين والشركاء والجهات
+            المعنية الأخرى من خلال التطبيق الفعّال لنظام إدارة الجودة لدينا.
+          </p>
 
-        <div class="grid cols-4">
-          <div class="card q-card">
-            <div class="ic">🔍</div>
-            <h3>الشفافية</h3>
-            <p>الوضوح والمصداقية في صرف التبرعات وتقديم الخدمات وإعداد التقارير الدورية للمتبرعين والجهات.</p>
+          <h2>لتحقيق هذا الالتزام، سنقوم بما يلي:</h2>
+          <ul class="commit-list">
+            <li>تقديم الخدمات الخيرية بطريقة عادلة وشفافة ومهنية.</li>
+            <li>الحفاظ على ثقافة النزاهة والمساءلة والمسؤولية الاجتماعية في جميع عملياتنا وتفاعلاتنا.</li>
+            <li>وضع أهداف جودة قابلة للقياس، ومراقبتها، ومراجعتها، بما يدعم توجهنا الاستراتيجي ويعزّز التحسين المستمر.</li>
+            <li>تحسين فعالية وكفاءة عملياتنا من خلال التقييم الدوري، والتفكير القائم على تقييم المخاطر، وتحديد فرص التحسين.</li>
+            <li>الامتثال لجميع المتطلبات القانونية والتنظيمية والتشريعية السارية ذات الصلة بأنشطتنا.</li>
+            <li>التعاون مع الجهات الحكومية، والجهات المانحة، ومنظمات المجتمع المدني، والجهات المعنية الأخرى لتعظيم الأثر الإيجابي لخدماتنا.</li>
+            <li>ضمان كفاءة الموظفين والمتطوعين، وانخراطهم، وتمكينهم من المساهمة في تحقيق أهداف الجودة لدينا.</li>
+            <li>مراجعة سياسة الجودة هذه دوريًا لضمان استمرار ملاءمتها وفعاليتها، وإبلاغها لجميع الموظفين والجهات المعنية.</li>
+          </ul>
+
+          <p class="closing">
+            من خلال هذه الالتزامات، تسعى جمعية باربار الخيرية الاجتماعية إلى إحداث
+            تغييرٍ ملموسٍ ودائمٍ في حياة من نخدمهم.
+          </p>
+
+          <div class="approval">
+            <span class="lbl">تم الاعتماد من قبل:</span>
+            <span class="role">الرئيس</span>
           </div>
-          <div class="card q-card">
-            <div class="ic">🏆</div>
-            <h3>التميّز المؤسسي</h3>
-            <p>تطبيق أفضل الممارسات الإدارية والالتزام بالمعايير المهنية في العمل الخيري والإنساني.</p>
-          </div>
-          <div class="card q-card">
-            <div class="ic">📈</div>
-            <h3>التطوير المستمر</h3>
-            <p>تحسين الخدمات والعمليات باستمرار بما يواكب احتياجات المستفيدين وتطلعات المجتمع.</p>
-          </div>
-          <div class="card q-card">
-            <div class="ic">🌐</div>
-            <h3>تيسير الوصول للخدمات</h3>
-            <p>تسهيل وصول المستفيدين إلى خدماتنا عبر القنوات الرقمية والمباشرة بكل يسر وسهولة.</p>
-          </div>
-        </div>
+
+          <div class="doc-ref">BCS-QP-001 &nbsp;|&nbsp; REV: 00 &nbsp;|&nbsp; ED 01.06.2026</div>
+        </article>
       </div>
     </section>
   `,
@@ -62,24 +69,89 @@ import { RouterLink } from '@angular/router';
     .crumbs a { color: var(--color-accent); }
     .crumbs span { padding: 0 6px; }
 
-    .intro {
-      max-width: 780px;
-      margin: 0 auto 48px;
-      text-align: center;
+    .policy {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-top: 4px solid var(--color-primary);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 44px 48px;
     }
-    .intro p { color: var(--color-text-muted); font-size: 17px; line-height: 2; margin: 0; }
-
-    .q-card { padding: 30px 22px; text-align: center; height: 100%; }
-    .q-card .ic {
-      width: 64px; height: 64px;
-      margin: 0 auto 16px;
-      display: flex; align-items: center; justify-content: center;
+    .policy > p {
+      color: var(--color-text);
+      font-size: 17px;
+      line-height: 2;
+      margin: 0 0 18px;
+    }
+    .policy h2 {
+      color: var(--color-primary-dark);
+      font-size: 22px;
+      margin: 30px 0 18px;
+    }
+    .commit-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .commit-list li {
+      position: relative;
+      padding-inline-start: 34px;
+      color: var(--color-text);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+    .commit-list li::before {
+      content: '✓';
+      position: absolute;
+      inset-inline-start: 0;
+      top: 2px;
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background: var(--color-primary-light);
+      color: var(--color-primary);
       border-radius: 50%;
-      font-size: 30px;
+      font-size: 12px;
+      font-weight: 900;
     }
-    .q-card h3 { color: var(--color-primary-dark); font-size: 18px; margin-bottom: 8px; }
-    .q-card p { color: var(--color-text-muted); font-size: 14px; margin: 0; line-height: 1.85; }
+    .closing {
+      font-weight: 700;
+      color: var(--color-primary-darker) !important;
+    }
+    .approval {
+      margin-top: 30px;
+      padding-top: 22px;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .approval .lbl { color: var(--color-text-muted); font-size: 15px; }
+    .approval .role {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 18px;
+      color: var(--color-primary-darker);
+    }
+    .doc-ref {
+      margin-top: 22px;
+      color: var(--color-text-muted);
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 640px) {
+      .policy { padding: 30px 22px; }
+      .policy > p { font-size: 16px; }
+    }
   `],
 })
 export class QualityComponent {}
