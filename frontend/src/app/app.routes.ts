@@ -5,6 +5,7 @@ export const routes: Routes = [
   { path: '', loadComponent: () => import('./pages/home/home.component').then((m) => m.HomeComponent), title: 'جمعية باربار الخيرية' },
   { path: 'about', loadComponent: () => import('./pages/about/about.component').then((m) => m.AboutComponent), title: 'من نحن' },
   { path: 'team', loadComponent: () => import('./pages/team/team.component').then((m) => m.TeamComponent), title: 'مجلس الإدارة' },
+  { path: 'quality', loadComponent: () => import('./pages/quality/quality.component').then((m) => m.QualityComponent), title: 'سياسة الجودة' },
   { path: 'projects', loadComponent: () => import('./pages/projects/projects.component').then((m) => m.ProjectsComponent), title: 'مشاريعنا' },
   { path: 'news', loadComponent: () => import('./pages/news/news.component').then((m) => m.NewsComponent), title: 'الأخبار' },
   { path: 'events', loadComponent: () => import('./pages/events/events.component').then((m) => m.EventsComponent), title: 'الفعاليات' },

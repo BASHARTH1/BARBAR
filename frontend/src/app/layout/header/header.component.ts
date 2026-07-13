@@ -31,6 +31,7 @@ export class HeaderComponent {
       children: [
         { label: 'نبذة عن الجمعية', path: '/about' },
         { label: 'مجلس الإدارة', path: '/team' },
+        { label: 'سياسة الجودة', path: '/quality' },
       ],
     },
     {
