@@ -21,8 +21,8 @@ import { RouterLink } from '@angular/router';
             بما يساهم في تحسين جودة الحياة والاستقرار والاستدامة للمجتمع
           </p>
           <div class="cta">
-            <a href="https://e.barbarcharity.org/OnlineServices/don_online_payment.php?NewTransaction=1&donParam=NQ==" class="btn btn-accent btn-lg">تبرع الآن</a>
-            <a href="https://e.barbarcharity.org/OnlineServices/don_online_payment.php?NewTransaction=1" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">تعرف على مشاريعنا</a>
+            <a href="https://e.barbarcharity.org/OnlineServices/don_online_payment.php?NewTransaction=1&donParam=NQ==" class="btn btn-accent btn-lg">التبرع المباشر</a>
+            <a href="https://e.barbarcharity.org/OnlineServices/don_online_payment.php?NewTransaction=1" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">التبرع لمشاريعنا</a>
           </div>
         </div>
 
