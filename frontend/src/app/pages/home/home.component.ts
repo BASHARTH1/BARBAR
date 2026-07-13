@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from './sections/hero.component';
+import { PresidentMessageComponent } from './sections/president-message.component';
 import { IntroComponent } from './sections/intro.component';
 import { DonationHubComponent } from './sections/donation-hub.component';
 import { VideoSupportComponent } from './sections/video-support.component';
@@ -12,6 +13,7 @@ import { SponsorsComponent } from './sections/sponsors.component';
   standalone: true,
   imports: [
     HeroComponent,
+    PresidentMessageComponent,
     IntroComponent,
     DonationHubComponent,
     VideoSupportComponent,
@@ -21,6 +23,7 @@ import { SponsorsComponent } from './sections/sponsors.component';
   ],
   template: `
     <app-hero></app-hero>
+    <app-president-message></app-president-message>
     <app-sponsors></app-sponsors>
     <app-intro></app-intro>
     <app-donation-hub></app-donation-hub>
