@@ -63,16 +63,6 @@ interface Program {
             </article>
           }
         </div>
-
-        <div class="quick-amounts">
-          <h3>تبرّع بمبلغ مخصص</h3>
-          <div class="amounts">
-            @for (a of quickAmounts; track a) {
-              <a [href]="customDonateUrl" target="_blank" rel="noopener" class="amount-pill">{{ a }} د.ب</a>
-            }
-            <a [href]="customDonateUrl" target="_blank" rel="noopener" class="amount-pill custom">مبلغ آخر</a>
-          </div>
-        </div>
       </div>
     </section>
   `,
@@ -130,36 +120,9 @@ interface Program {
     .program-card[data-tone="peach"]    { background: #fce8d4; }
     .program-card[data-tone="sky"]      { background: #dbe7f5; }
 
-    .quick-amounts {
-      margin-top: 56px;
-      padding: 32px;
-      background: #fff;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-      text-align: center;
-
-      h3 { color: var(--color-primary-dark); margin-bottom: 18px; font-size: 22px; }
-    }
-    .amounts { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
-    .amount-pill {
-      padding: 10px 22px;
-      background: var(--color-bg-soft);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-pill);
-      font-weight: 700;
-      transition: all 0.2s;
-      &:hover, &.custom {
-        background: var(--color-primary);
-        color: #fff;
-        border-color: var(--color-primary);
-      }
-    }
   `],
 })
 export class DonationHubComponent {
-  quickAmounts = [5, 10, 20, 50, 100, 200];
-  customDonateUrl = 'https://e.barbarcharity.org/OnlineServices/don_online_payment.php?NewTransaction=1&donParam=NQ==';
-
   programs: Program[] = [
     {
       id: 'medical',
