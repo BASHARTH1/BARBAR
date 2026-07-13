@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   template: `
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
@@ -49,8 +48,8 @@ import { RouterLink } from '@angular/router';
           <a href="https://e.barbarcharity.org/OnlineServices/don_online_payment.php?NewTransaction=1&donParam=NQ==" class="uc-cta">تبرع الآن</a>
 
           <div class="uc-quick-list">
-            <a routerLink="/donate" class="uc-quick-item">صدقة الجمعة عبر BenefitPay</a>
-            <a routerLink="/donate" class="uc-quick-item">صدقة الدفن عبر BenefitPay</a>
+            <a href="https://e.barbarcharity.org/u/sadaqat" target="_blank" rel="noopener" class="uc-quick-item">صدقة الجمعة</a>
+            <a href="https://e.barbarcharity.org/u/sadaqat" target="_blank" rel="noopener" class="uc-quick-item">صدقة الدفن</a>
           </div>
         </aside>
       </div>
