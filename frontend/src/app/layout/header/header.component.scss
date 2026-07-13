@@ -285,8 +285,8 @@
   .has-children.open .submenu { display: block; }
   .hamburger { display: inline-flex; }
   .brand-sub { display: none; }
-  /* Push actions to the far edge since the nav is out of flow on mobile */
-  .header-actions { margin-inline-start: auto; }
+  /* Logo pinned right, hamburger pinned left, buttons centered between them */
+  .header-actions { margin-inline: auto; }
 }
 
 /* Compact action buttons so the bar never overflows on small screens */
