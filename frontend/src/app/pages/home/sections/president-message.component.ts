@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
     <section class="section president">
       <div class="container">
         <div class="msg-card">
-          <img class="president-photo" src="assets/members/member-6.jpg" alt="علي سبت — رئيس جمعية باربار الخيرية الاجتماعية" loading="lazy" />
           <span class="eyebrow">كلمة رئيس الجمعية</span>
           <span class="quote-mark" aria-hidden="true">”</span>
           <div class="msg-body">
@@ -31,8 +30,11 @@ import { CommonModule } from '@angular/common';
             <p>والسلام عليكم ورحمة الله وبركاته.</p>
           </div>
           <div class="signature">
-            <span class="sig-name">علي سبت</span>
-            <span class="sig-title">رئيس جمعية باربار الخيرية الاجتماعية</span>
+            <img class="president-photo" src="assets/members/member-6.jpg" alt="علي سبت — رئيس جمعية باربار الخيرية الاجتماعية" loading="lazy" />
+            <div class="sig-text">
+              <span class="sig-name">علي سبت</span>
+              <span class="sig-title">رئيس جمعية باربار الخيرية الاجتماعية</span>
+            </div>
           </div>
         </div>
       </div>
@@ -52,18 +54,14 @@ import { CommonModule } from '@angular/common';
       overflow: hidden;
     }
     .president-photo {
-      float: left;
-      width: 110px;
-      height: 110px;
+      width: 72px;
+      height: 72px;
       object-fit: cover;
       object-position: center top;
       border-radius: 50%;
-      border: 4px solid #fff;
+      border: 3px solid #fff;
       box-shadow: var(--shadow-md), 0 0 0 2px var(--color-primary-light);
-      margin-right: 28px;
-      margin-bottom: 14px;
-      position: relative;
-      z-index: 1;
+      flex-shrink: 0;
     }
     .eyebrow {
       display: inline-block;
@@ -102,9 +100,10 @@ import { CommonModule } from '@angular/common';
       padding-top: 22px;
       border-top: 1px solid var(--color-border);
       display: flex;
-      flex-direction: column;
-      gap: 4px;
+      align-items: center;
+      gap: 16px;
     }
+    .sig-text { display: flex; flex-direction: column; gap: 4px; }
     .sig-name {
       font-family: var(--font-display);
       font-weight: 900;
@@ -117,12 +116,7 @@ import { CommonModule } from '@angular/common';
       .msg-card { padding: 32px 22px 28px; }
       .msg-body p { font-size: 16px; }
       .quote-mark { font-size: 84px; inset-inline-end: 16px; }
-      .president-photo {
-        width: 84px;
-        height: 84px;
-        margin-right: 16px;
-        margin-bottom: 8px;
-      }
+      .president-photo { width: 60px; height: 60px; }
     }
   `],
 })
