@@ -7,6 +7,7 @@
   &.is-scrolled {
     box-shadow: var(--shadow-sm);
     .header-inner { padding-top: 10px; padding-bottom: 10px; }
+    .brand-logo img { height: 46px; }
   }
 }
 .header-inner {
@@ -24,7 +25,7 @@
   flex-shrink: 0;
 }
 .brand-logo { display: inline-flex; align-items: center; }
-.brand-logo img { height: 56px; width: auto; display: block; object-fit: contain; }
+.brand-logo img { height: 54px; width: 54px; display: block; object-fit: contain; transition: height 0.25s ease; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.25; }
 .brand-name {
   font-family: var(--font-display);
@@ -284,22 +285,30 @@
   .has-children.open .submenu { display: block; }
   .hamburger { display: inline-flex; }
   .brand-sub { display: none; }
+  /* Push actions to the far edge since the nav is out of flow on mobile */
+  .header-actions { margin-inline-start: auto; }
 }
 
 /* Compact action buttons so the bar never overflows on small screens */
 @media (max-width: 720px) {
-  .header-inner { gap: 10px; padding: 12px 16px; }
-  .brand-logo img { height: 46px; }
-  .header-actions { gap: 8px; }
-  .donate-btn { padding: 10px 16px; font-size: 14px; }
+  .header-inner { gap: 10px; padding: 12px 14px; }
+  .brand-logo img { height: 44px; width: 44px; }
+  .header-actions { gap: 7px; }
+  .donate-btn { padding: 10px 14px; font-size: 14px; }
 
-  /* WhatsApp + IBAN collapse to icon-only circles */
-  .whatsapp-btn, .iban-btn { padding: 0; width: 42px; height: 42px; border-radius: 50%; }
-  .whatsapp-btn .btn-label, .iban-btn .btn-label { display: none; }
+  /* IBAN keeps its text label (compact) */
+  .iban-btn { padding: 9px 12px; font-size: 13px; }
+  .iban-btn .btn-label { display: inline; }
+
+  /* WhatsApp collapses to an icon-only circle to save space */
+  .whatsapp-btn { padding: 0; width: 42px; height: 42px; border-radius: 50%; }
+  .whatsapp-btn .btn-label { display: none; }
 }
 
-@media (max-width: 400px) {
-  /* Very narrow phones: drop the IBAN icon button, keep WhatsApp + Donate */
-  .iban-btn { display: none; }
-  .donate-btn { padding: 9px 14px; }
+@media (max-width: 380px) {
+  .header-inner { gap: 8px; }
+  .header-actions { gap: 6px; }
+  .iban-btn { padding: 8px 10px; }
+  .donate-btn { padding: 9px 12px; }
+  .whatsapp-btn { width: 40px; height: 40px; }
 }
