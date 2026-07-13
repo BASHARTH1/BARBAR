@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
     <section class="section president">
       <div class="container">
         <div class="msg-card">
+          <img class="president-photo" src="assets/members/member-6.jpg" alt="علي سبت — رئيس جمعية باربار الخيرية الاجتماعية" loading="lazy" />
           <span class="eyebrow">كلمة رئيس الجمعية</span>
           <span class="quote-mark" aria-hidden="true">”</span>
           <div class="msg-body">
@@ -49,6 +50,20 @@ import { CommonModule } from '@angular/common';
       border-top: 4px solid var(--color-primary);
       padding: 44px 48px 40px;
       overflow: hidden;
+    }
+    .president-photo {
+      float: left;
+      width: 148px;
+      height: 148px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: var(--shadow-md), 0 0 0 2px var(--color-primary-light);
+      margin-right: 28px;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
     }
     .eyebrow {
       display: inline-block;
@@ -102,6 +117,12 @@ import { CommonModule } from '@angular/common';
       .msg-card { padding: 32px 22px 28px; }
       .msg-body p { font-size: 16px; }
       .quote-mark { font-size: 84px; inset-inline-end: 16px; }
+      .president-photo {
+        width: 104px;
+        height: 104px;
+        margin-right: 18px;
+        margin-bottom: 10px;
+      }
     }
   `],
 })
