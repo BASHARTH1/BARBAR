@@ -1,5 +1,86 @@
 :host { display: block; }
 
+/* ===== "Want a website like this?" lead band ===== */
+.web-offer {
+  background: var(--color-primary-darker);
+  color: #fff;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.web-offer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.web-offer-text h3 {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 0 4px;
+}
+.web-offer-text p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+  max-width: 460px;
+}
+.web-offer-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.web-offer-form input {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  min-width: 170px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.web-offer-form input::placeholder { color: rgba(255, 255, 255, 0.6); }
+.web-offer-form input:focus {
+  outline: none;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+}
+.web-offer-form .btn { padding: 12px 24px; }
+.web-offer-done {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(46, 155, 101, 0.18);
+  border: 1px solid rgba(46, 155, 101, 0.5);
+  color: #d8f3e6;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+}
+.web-offer-done .check {
+  width: 24px; height: 24px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--color-success);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.web-offer-error {
+  margin: 12px 0 0;
+  color: #ffd7d2;
+  font-size: 14px;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  .web-offer-form { width: 100%; }
+  .web-offer-form input { flex: 1 1 100%; min-width: 0; }
+  .web-offer-form .btn { width: 100%; }
+}
+
 .cta-band {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: #fff;

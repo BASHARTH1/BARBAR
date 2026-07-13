@@ -11,6 +11,31 @@
   </div>
 </section>
 
+<section class="web-offer">
+  <div class="container web-offer-inner">
+    <div class="web-offer-text">
+      <h3>أعجبك الموقع؟</h3>
+      <p>اترك اسمك ورقم هاتفك وسنتواصل معك.</p>
+    </div>
+    @if (!sent()) {
+      <form class="web-offer-form" (ngSubmit)="submitLead()">
+        <input type="text" name="name" [(ngModel)]="leadName" placeholder="الاسم" aria-label="الاسم" required />
+        <input type="tel" name="phone" [(ngModel)]="leadPhone" placeholder="رقم الهاتف" aria-label="رقم الهاتف" required />
+        <button type="submit" class="btn btn-accent" [disabled]="sending()">
+          {{ sending() ? 'جارٍ الإرسال…' : 'أرسل الطلب' }}
+        </button>
+      </form>
+    } @else {
+      <div class="web-offer-done">
+        <span class="check">✓</span> تم استلام طلبك، سنتواصل معك قريبًا إن شاء الله.
+      </div>
+    }
+  </div>
+  @if (error()) {
+    <div class="container"><p class="web-offer-error">{{ error() }}</p></div>
+  }
+</section>
+
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="col brand-col">
