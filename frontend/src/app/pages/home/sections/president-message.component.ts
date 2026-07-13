@@ -53,8 +53,8 @@ import { CommonModule } from '@angular/common';
     }
     .president-photo {
       float: left;
-      width: 148px;
-      height: 148px;
+      width: 110px;
+      height: 110px;
       object-fit: cover;
       object-position: center top;
       border-radius: 50%;
@@ -118,10 +118,10 @@ import { CommonModule } from '@angular/common';
       .msg-body p { font-size: 16px; }
       .quote-mark { font-size: 84px; inset-inline-end: 16px; }
       .president-photo {
-        width: 104px;
-        height: 104px;
-        margin-right: 18px;
-        margin-bottom: 10px;
+        width: 84px;
+        height: 84px;
+        margin-right: 16px;
+        margin-bottom: 8px;
       }
     }
   `],
