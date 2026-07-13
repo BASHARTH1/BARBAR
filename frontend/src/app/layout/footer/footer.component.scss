@@ -216,11 +216,22 @@
   }
   svg { display: block; }
 }
-.socials a:nth-child(1):hover { background: #1877F2; border-color: #1877F2; }
-.socials a:nth-child(2):hover { background: #000; border-color: #000; }
-.socials a:nth-child(3):hover { background: #E4405F; border-color: #E4405F; }
-.socials a:nth-child(4):hover { background: #FF0000; border-color: #FF0000; }
-.socials a:nth-child(5):hover { background: #25D366; border-color: #25D366; }
+.socials a.site-link img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  transition: filter 0.2s, opacity 0.2s;
+}
+.socials a.site-link:hover { background: #fff; border-color: #fff; transform: translateY(-2px); }
+.socials a.site-link:hover img { filter: none; opacity: 1; }
+.socials a:nth-child(2):hover { background: #1877F2; border-color: #1877F2; }
+.socials a:nth-child(3):hover { background: #000; border-color: #000; }
+.socials a:nth-child(4):hover { background: #E4405F; border-color: #E4405F; }
+.socials a:nth-child(5):hover { background: #FF0000; border-color: #FF0000; }
+.socials a:nth-child(6):hover { background: #25D366; border-color: #25D366; }
 
 .contact-list { gap: 12px; }
 .contact-list li { font-size: 14px; opacity: 0.9; }
