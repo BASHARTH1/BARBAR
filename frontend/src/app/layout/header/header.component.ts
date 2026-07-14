@@ -38,7 +38,7 @@ export class HeaderComponent {
       label: 'الخدمات الرقمية',
       path: '/projects',
       children: [
-        { label: 'تسجيل وتجديد العضوية', path: 'https://docs.google.com/forms/d/e/1FAIpQLSdUx_xMMNzjGqXo9O7vkzssZj1UIUaSozn47c5qDNOdcetOFg/viewform' },
+        { label: 'تسجيل وتجديد العضوية', path: 'https://e.barbarcharity.org/OnlineServices/mmb_online.php' },
         { label: 'طلب مساعدة إجتماعية', path: 'https://e.barbarcharity.org/OnlineServices/aid_soc.php' },
         { label: 'مشروع كنوز العطاء', path: 'https://docs.google.com/forms/d/e/1FAIpQLSftIxJWNzpzFe-UXMc5-cPEy_W8FaIUdNr6LHj7TPO01cTWEg/viewform' },
       ],
