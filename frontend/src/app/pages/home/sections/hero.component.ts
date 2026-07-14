@@ -43,8 +43,6 @@ import { CommonModule } from '@angular/common';
             <span class="uc-pct">{{ campaign.percent }}%</span>
           </div>
 
-          <p class="uc-desc">{{ campaign.description }}</p>
-
           <button type="button" class="uc-cta" (click)="openNoCampaign()">تبرع الآن</button>
 
           <div class="uc-quick-list">
@@ -76,7 +74,6 @@ export class HeroComponent {
   campaign = {
     percent: 85,
     donors: 450,
-    description: 'حملة جمع تبرعات لعلاج الشاب بشير عون المصاب بفشل كلوي',
   };
 
   noCampaignOpen = signal(false);
