@@ -27,7 +27,7 @@ import { CommonModule } from '@angular/common';
 
         <aside class="urgent-card">
           <header class="uc-head">
-            <span class="uc-title">حملة تبرع لعلاج مريض</span>
+            <span class="uc-title">حملة تبرع</span>
             <span class="uc-badge">حالة عاجلة</span>
           </header>
 
