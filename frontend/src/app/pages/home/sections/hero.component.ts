@@ -33,7 +33,7 @@ import { CommonModule } from '@angular/common';
 
           <div class="uc-cost">
             <span class="uc-cost-label">تكلفة العلاج</span>
-            <span class="uc-cost-amount">40,000</span>
+            <span class="uc-cost-amount">-</span>
             <span class="uc-cost-currency">دينار بحريني</span>
           </div>
 

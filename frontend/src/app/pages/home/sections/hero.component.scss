@@ -144,7 +144,7 @@
 
 .uc-cost {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   gap: 8px;
   background: var(--color-bg-soft);
@@ -164,6 +164,7 @@
   font-weight: 900;
   color: var(--color-primary-darker);
   margin-inline-start: auto;
+  margin-inline-end: 10px;
 }
 .uc-cost-currency {
   font-size: 13px;
