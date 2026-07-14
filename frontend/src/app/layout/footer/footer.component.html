@@ -14,16 +14,31 @@
 <section class="web-offer">
   <div class="container web-offer-inner">
     <div class="web-offer-text">
-      <h3>أعجبك الموقع؟</h3>
-      <p>اترك اسمك ورقم هاتفك وسنتواصل معك.</p>
+      <h3>أعجبك الموقع؟ نصمّم لك موقعًا مثله</h3>
+      <p>اترك اسمك ورقم هاتفك وسنتواصل معك لتصميم موقعك الإلكتروني الخاص.</p>
     </div>
     @if (!sent()) {
       <form class="web-offer-form" (ngSubmit)="submitLead()">
-        <input type="text" name="name" [(ngModel)]="leadName" placeholder="الاسم" aria-label="الاسم" required />
-        <input type="tel" name="phone" [(ngModel)]="leadPhone" placeholder="رقم الهاتف" aria-label="رقم الهاتف" required />
-        <button type="submit" class="btn btn-accent" [disabled]="sending()">
-          {{ sending() ? 'جارٍ الإرسال…' : 'أرسل الطلب' }}
-        </button>
+        <div class="wo-inputs">
+          <div class="wo-fields">
+            <input type="text" name="name" [(ngModel)]="leadName" placeholder="الاسم" aria-label="الاسم" required />
+            <input type="email" name="email" [(ngModel)]="leadEmail" placeholder="البريد الإلكتروني" aria-label="البريد الإلكتروني" />
+            <input type="tel" name="phone" [(ngModel)]="leadPhone" placeholder="رقم الهاتف" aria-label="رقم الهاتف" required />
+            <button type="submit" class="btn btn-accent wo-submit" [disabled]="sending()">
+              {{ sending() ? 'جارٍ الإرسال…' : 'أرسل الطلب' }}
+            </button>
+          </div>
+          <div class="wo-rating" role="radiogroup" aria-label="تقييمك للموقع">
+            <span class="wo-rating-label">تقييمك للموقع:</span>
+            <div class="wo-stars" (mouseleave)="hoverRating.set(0)">
+              @for (s of stars; track s) {
+                <button type="button" class="star" [class.on]="s <= (hoverRating() || rating())"
+                  (click)="setRating(s)" (mouseenter)="hoverRating.set(s)"
+                  [attr.aria-label]="s + ' من 5'" [attr.aria-pressed]="s <= rating()">★</button>
+              }
+            </div>
+          </div>
+        </div>
       </form>
     } @else {
       <div class="web-offer-done">

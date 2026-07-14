@@ -25,11 +25,18 @@
   opacity: 0.85;
   max-width: 460px;
 }
-.web-offer-form {
+/* The form dissolves into the layout so text | inputs | button become the 3 columns */
+.web-offer-form { display: contents; }
+.wo-inputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.wo-fields {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  align-items: center;
 }
 .web-offer-form input {
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -39,7 +46,8 @@
   padding: 12px 16px;
   font-family: inherit;
   font-size: 15px;
-  min-width: 170px;
+  min-width: 150px;
+  flex: 1 1 150px;
   transition: border-color 0.2s, background 0.2s;
 }
 .web-offer-form input::placeholder { color: rgba(255, 255, 255, 0.6); }
@@ -48,7 +56,29 @@
   border-color: #fff;
   background: rgba(255, 255, 255, 0.14);
 }
-.web-offer-form .btn { padding: 12px 24px; }
+.wo-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.wo-rating-label { font-size: 14px; opacity: 0.85; }
+.wo-stars { display: inline-flex; gap: 2px; }
+.wo-stars .star {
+  background: none;
+  border: 0;
+  padding: 2px;
+  font-size: 24px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: color 0.15s, transform 0.15s;
+}
+.wo-stars .star:hover { transform: scale(1.15); }
+.wo-stars .star.on { color: #ffc043; }
+.web-offer-form .btn { padding: 12px 28px; }
+/* Button sits in the fields row (level with the inputs), pushed to the far left */
+.wo-submit { flex-shrink: 0; white-space: nowrap; margin-inline-start: auto; }
 .web-offer-done {
   display: inline-flex;
   align-items: center;
@@ -75,10 +105,12 @@
   font-size: 14px;
   font-weight: 600;
 }
-@media (max-width: 700px) {
-  .web-offer-form { width: 100%; }
+@media (max-width: 820px) {
+  .web-offer-inner { flex-direction: column; align-items: stretch; }
+  .wo-inputs { width: 100%; }
+  .wo-fields { width: 100%; }
   .web-offer-form input { flex: 1 1 100%; min-width: 0; }
-  .web-offer-form .btn { width: 100%; }
+  .wo-submit { width: 100%; }
 }
 
 .cta-band {
