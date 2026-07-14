@@ -14,7 +14,9 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 16px 24px;
+  padding: 16px 32px;
+  max-width: none;
+  width: 100%;
   transition: padding 0.25s;
 }
 
