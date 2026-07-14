@@ -9,7 +9,7 @@
 }
 .web-offer-inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
@@ -79,8 +79,8 @@
 .wo-stars .star:hover { transform: scale(1.15); }
 .wo-stars .star.on { color: #ffc043; }
 .web-offer-form .btn { padding: 12px 28px; }
-/* Button sits in the fields row (level with the inputs), pushed to the far left */
-.wo-submit { flex-shrink: 0; white-space: nowrap; margin-inline-start: auto; }
+/* Third column, top-aligned with the fields row */
+.wo-submit { flex-shrink: 0; white-space: nowrap; }
 .web-offer-done {
   display: inline-flex;
   align-items: center;

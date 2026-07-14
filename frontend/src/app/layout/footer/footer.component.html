@@ -24,9 +24,6 @@
             <input type="text" name="name" [(ngModel)]="leadName" placeholder="الاسم" aria-label="الاسم" required />
             <input type="email" name="email" [(ngModel)]="leadEmail" placeholder="البريد الإلكتروني" aria-label="البريد الإلكتروني" />
             <input type="tel" name="phone" [(ngModel)]="leadPhone" placeholder="رقم الهاتف" aria-label="رقم الهاتف" required />
-            <button type="submit" class="btn btn-accent wo-submit" [disabled]="sending()">
-              {{ sending() ? 'جارٍ الإرسال…' : 'أرسل الطلب' }}
-            </button>
           </div>
           <div class="wo-rating" role="radiogroup" aria-label="تقييمك للموقع">
             <span class="wo-rating-label">تقييمك للموقع:</span>
@@ -39,6 +36,9 @@
             </div>
           </div>
         </div>
+        <button type="submit" class="btn btn-accent wo-submit" [disabled]="sending()">
+          {{ sending() ? 'جارٍ الإرسال…' : 'أرسل الطلب' }}
+        </button>
       </form>
     } @else {
       <div class="web-offer-done">
