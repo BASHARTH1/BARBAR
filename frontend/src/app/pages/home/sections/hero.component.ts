@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -45,7 +45,7 @@ import { CommonModule } from '@angular/common';
 
           <p class="uc-desc">{{ campaign.description }}</p>
 
-          <a href="https://e.barbarcharity.org/OnlineServices/don_online_payment.php?NewTransaction=1&donParam=NQ==" class="uc-cta">تبرع الآن</a>
+          <button type="button" class="uc-cta" (click)="openNoCampaign()">تبرع الآن</button>
 
           <div class="uc-quick-list">
             <a href="https://e.barbarcharity.org/u/sadaqat" target="_blank" rel="noopener" class="uc-quick-item">صدقة الجمعة</a>
@@ -54,6 +54,21 @@ import { CommonModule } from '@angular/common';
         </aside>
       </div>
     </section>
+
+    @if (noCampaignOpen()) {
+      <div class="nc-overlay" (click)="closeNoCampaign()">
+        <div class="nc-modal" role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
+          <button type="button" class="nc-close" (click)="closeNoCampaign()" aria-label="إغلاق">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+          <div class="nc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          </div>
+          <p class="nc-msg">عذرًا، لا توجد حملات تبرع عاجلة حاليًا</p>
+          <button type="button" class="btn btn-primary" (click)="closeNoCampaign()">حسنًا</button>
+        </div>
+      </div>
+    }
   `,
   styleUrls: ['./hero.component.scss'],
 })
@@ -63,4 +78,14 @@ export class HeroComponent {
     donors: 450,
     description: 'حملة جمع تبرعات لعلاج الشاب بشير عون المصاب بفشل كلوي',
   };
+
+  noCampaignOpen = signal(false);
+
+  openNoCampaign() {
+    this.noCampaignOpen.set(true);
+  }
+
+  closeNoCampaign() {
+    this.noCampaignOpen.set(false);
+  }
 }
