@@ -163,6 +163,14 @@
   grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
   gap: 44px;
   padding-bottom: 52px;
+  align-items: stretch;
+}
+/* Brand column: push the social icons to the bottom, level with the other columns */
+.brand-col { display: flex; flex-direction: column; }
+/* Contact column: push the WhatsApp button to the bottom too (desktop rows) */
+@media (min-width: 901px) {
+  .footer-grid .col:last-child { display: flex; flex-direction: column; }
+  .footer-grid .col:last-child .whatsapp-btn { margin-top: auto; }
 }
 .col h4 {
   color: #fff;
@@ -199,7 +207,7 @@
 }
 .about { font-size: 14px; opacity: 0.85; line-height: 1.85; margin-bottom: 20px; }
 
-.socials { display: flex; gap: 8px; }
+.socials { display: flex; gap: 8px; margin-top: auto; }
 .socials a {
   width: 38px; height: 38px;
   display: inline-flex; align-items: center; justify-content: center;
